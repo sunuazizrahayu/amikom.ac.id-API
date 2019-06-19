@@ -2,18 +2,23 @@
 Un-Official API Universitas AMIKOM Yogyakarta
 
 ## API List
-- Get Status Mahasiswa
-- Get Biodata Mahasiswa (next)
+- [Get Status Mahasiswa](#get-status-mahasiswa)
+- [Get Biodata Mahasiswa](#get-biodata-mahasiswa)
 
-## Instalasi
-Tambahkan kode ini di file **.php**
+## Installation
+Add this code to your **.php** file.
 ```
 require_once 'Amikom.php';
 $amikom = new Amikom();
 ```
 
-## Penggunaan
+## Usage
 ### Get Status Mahasiswa
 ```
 echo $amikom->getStatusMahasiswa('xx.xx.xxxx');
+```
+
+### Get Biodata Mahasiswa
+```
+echo $amikom->getBiodataMahasiswa('YOUR_NIM', 'YOUR_PASSWORD');
 ```
