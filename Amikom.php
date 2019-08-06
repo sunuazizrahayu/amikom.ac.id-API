@@ -51,22 +51,22 @@ class Amikom
 		curl_close ($ch);
 	}
 	function post_data($site,$data){
-		$datapost = curl_init();
 		$headers = array("Expect:");
-		curl_setopt($datapost, CURLOPT_URL, $site);
-		curl_setopt($datapost, CURLOPT_TIMEOUT, 40000);
-		curl_setopt($datapost, CURLOPT_HEADER, TRUE);
-		curl_setopt($datapost, CURLOPT_HTTPHEADER, $headers);
-		curl_setopt($datapost, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
-		curl_setopt($datapost, CURLOPT_POST, TRUE);
-		curl_setopt($datapost, CURLOPT_POSTFIELDS, $data);
-		curl_setopt($datapost, CURLOPT_COOKIEFILE, "cookie.txt");
-		curl_setopt($datapost, CURLOPT_RETURNTRANSFER, true);
-		ob_start();
-		return curl_exec ($datapost);
-		ob_end_clean();
-		curl_close ($datapost);
-		unset($datapost);
+		// $datapost = curl_init();
+		// curl_setopt($datapost, CURLOPT_URL, $site);
+		// curl_setopt($datapost, CURLOPT_TIMEOUT, 40000);
+		// curl_setopt($datapost, CURLOPT_HEADER, TRUE);
+		// curl_setopt($datapost, CURLOPT_HTTPHEADER, $headers);
+		// curl_setopt($datapost, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+		// curl_setopt($datapost, CURLOPT_POST, TRUE);
+		// curl_setopt($datapost, CURLOPT_POSTFIELDS, $data);
+		// curl_setopt($datapost, CURLOPT_COOKIEFILE, "cookie.txt");
+		// curl_setopt($datapost, CURLOPT_RETURNTRANSFER, true);
+		// ob_start();
+		// return curl_exec ($datapost);
+		// ob_end_clean();
+		// curl_close ($datapost);
+		// unset($datapost);
 
 
 		$curl = curl_init();
